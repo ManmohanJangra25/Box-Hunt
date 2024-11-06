@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Hunt Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Box Hunt Game</h1>
+    <div class="game_wrapper">
+      <div>
+        <label for="gameTime">Game Timer (1-10s)</label>
+        <input type="number" id="gameTime" min="1" max="10" value="1" />
+      </div>
+      <div class="controls">
+        <button id="startButton">Start</button>
+        <button id="pauseButton">Pause</button>
+        <button id="resetButton">Reset</button>
+      </div>
+      <div id="game-container">
+        <div id="box"></div>
+      </div>
+      <div class="stats" style="display: none;">
+        <p id="cumulativeReactionTime">Cumulative Reaction Time: 0ms</p>
+        <p id="timeRemaining">Remaining 0 s</p>
+      </div>
+      <table>
+        <thead>
+            <tr>
+                <th>Mouse Click Number</th>
+                <th>Reaction Time</th>
+            </tr>
+        </thead>
+        <tbody id="reactionTimeTable"></tbody>
+      </table>
+    </div>
+    <script src="/app.js"></script>
+  </body>
+</html>
